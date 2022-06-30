@@ -1,0 +1,8 @@
+<h3>Lista de clientes</h3>
+<ul>
+  <li *ngFor="let cliente of clientes">
+    {{ cliente.id }} - {{ cliente.primeiroNome }}
+    <a [routerLink]="['/cliente', 'editar',cliente.id]">Editar</a> -
+    <button (click)="confirmaRemocao(cliente)">Excluir</button>
+  </li>
+</ul>
